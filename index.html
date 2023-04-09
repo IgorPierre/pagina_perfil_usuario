@@ -14,6 +14,69 @@
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    <h1>olá, dev!</h1>
+    <div class="container">
+        <header>
+            <picture>
+                <img class="header-logo" src="/images/logo.png" alt="logotipo da sync360">
+            </picture>
+        </header>
+    
+        <section class="user-info">
+            <div class="profile-content">
+                <img src="/images/selfie.bmp" alt="imagem do usuario da sync360">
+        
+                <h1 class="user-name">Pedro Rocha</h1>
+
+                <button class="submit-btn" onclick="Modal.open()">
+                    EDITAR DADOS
+                    <img src="/images/pencil.png" alt="icone de edicao">
+                </button>
+            </div>
+        
+            <div class="biograph-content">
+                <h1>Biografia</h1>
+                <p class="user-biography">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ipsum officiis harum voluptate, asperiores, nostrum minima laboriosam maxime atque quae nemo sunt labore explicabo eaque hic. Veniam ipsa labore sed!<br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur aspernatur in odit! Debitis tenetur voluptates, accusamus deserunt temporibus quisquam, unde natus esse numquam saepe veniam eveniet maiores totam molestiae obcaecati.</p>
+
+                <hr class="divider">
+
+                <div class="content-divider">
+                    <div>
+                        <h3>Localidade</h3>
+                        <span class="user-location">Sobral, Ceará</span>
+                    </div>
+                    <div>
+                        <h3>Idade</h3>
+                        <span class="user-age">24 anos</span>
+                    </div>  
+                </div>
+            </div>   
+        </section>
+
+        <div class="modal-overlay">
+            <div class="modal">
+                <a class="close-modal" onclick="Modal.close()"><img src="/images/close.png" alt=""></a>
+
+                <h2 class="form-title">Alterar dados</h2>
+    
+                <form class="modal-form">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="name">
+
+                    <label for="idade">Idade</label>
+                    <input type="number" name="idade" id="idade">
+
+                    <label for="localidade">Localidade</label>
+                    <input type="text" name="localidade" id="localidade">
+
+                    <label for="biografia">Biografia</label>
+                    <textarea name="biografia" id="biografia" cols="30" rows="2"></textarea>
+
+                    <button class="submit-btn" type="button" onclick="changeData()">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
